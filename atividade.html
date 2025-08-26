@@ -1,0 +1,39 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roubar senha</title>
+    <style>
+     body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffb6c1; 
+            color: #000000; 
+        }
+        p {
+            max-width: 600px;
+            margin: 10px auto;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+    </head>
+    <body>
+        <h2>✍🏾 DIGITE SUA SENHA</h2>
+        <input type="text" id="camposenha"
+        placeholder="DIGITE AQUI...">
+        <P id="resultado"> ➡️Você digitou: </P>
+        <script>
+            const campo = document.getElementById("camposenha");
+            const resultado = document.getElementById("resultado");
+            campo.addEventListener("keyup", function() {
+                let texto = campo.value;
+                let contagem = texto.length;
+                resultado.textContent = "➡️  Total: " + texto + " ( " + contagem + " caractere(s) )"; 
+                });
+        </script>
+
+    </body>
+</html>
