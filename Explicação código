@@ -1,0 +1,29 @@
+<h2>✏ DIGITE SUA SENHA</h2>
+<!-- Título da página -->
+
+<input type="text" id="camposenha" placeholder="DIGITE AQUI...">
+<!-- Campo de entrada de texto para o usuário digitar -->
+<!-- 'id' usado para referenciar no JavaScript -->
+<!-- 'placeholder' mostra texto antes do usuário digitar -->
+
+<p id="resultado">👉 Você digitou:</p>
+<!-- Parágrafo que exibirá o que o usuário digitou -->
+<!-- 'id' usado para atualizar o texto dinamicamente -->
+
+<script>
+  // Pega os elementos da página pelo id
+  const campo = document.getElementById("camposenha");
+  const resultado = document.getElementById("resultado");
+
+  // Adiciona um evento que roda toda vez que o usuário solta uma tecla
+  campo.addEventListener("keyup", function () {
+    // Pega o texto digitado pelo usuário
+    let texto = campo.value;
+
+    // Conta o número de caracteres digitados
+    let contagem = texto.length;
+
+    // Atualiza o parágrafo com o texto digitado e a quantidade de caracteres
+    resultado.textContent = "👉 Você digitou: " + texto + " (" + contagem + " caractere(s))";
+  });
+</script>
